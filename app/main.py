@@ -6,7 +6,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import auth, executions, webhooks, workflows
+from app.api.routes import auth, executions, simulate, webhooks, workflows
 from app.api.routes.templates import router as templates_router
 from app.core.config import settings
 from app.core.database import Base, engine
@@ -44,6 +44,7 @@ app.include_router(workflows.router, prefix=api)
 app.include_router(executions.router, prefix=api)
 app.include_router(templates_router, prefix=api)
 app.include_router(webhooks.router, prefix=api)
+app.include_router(simulate.router, prefix=api)
 
 
 @app.get("/health")

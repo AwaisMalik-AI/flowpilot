@@ -2,7 +2,7 @@
 
 **FlowPilot** is a developer-first, **API-driven workflow automation engine**. You define automations as **DAGs** of nodes (HTTP, conditions, transforms, email, delays, restricted code, read-only SQL, webhook responses). Runs are triggered by **webhooks**, **cron schedules** (Celery Beat), or **manual API execution**—similar in spirit to n8n or Zapier, but **backend-only** and **portfolio-friendly**.
 
-**Latest:** Native AI nodes — `llm_agent` (single specialist) and `ai_crew` (researcher → planner → critic handoffs) with optional `LLM_API_KEY`.
+**Latest:** AI nodes (`llm_agent`, `ai_crew`) plus **workflow dry-run** (`POST /api/simulate`) that skips side-effect nodes.
 
 ---
 
