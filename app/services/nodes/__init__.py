@@ -7,6 +7,8 @@ from app.services.nodes.delay_node import DelayNode
 from app.services.nodes.code_node import CodeNode
 from app.services.nodes.database_node import DatabaseNode
 from app.services.nodes.webhook_response_node import WebhookResponseNode
+from app.services.nodes.llm_agent_node import LLMAgentNode
+from app.services.nodes.crew_node import CrewNode
 
 __all__ = [
     "BaseNode",
@@ -20,4 +22,6 @@ __all__ = [
     "CodeNode",
     "DatabaseNode",
     "WebhookResponseNode",
+    "LLMAgentNode",
+    "CrewNode",
 ]

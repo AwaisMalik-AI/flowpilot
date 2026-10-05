@@ -44,6 +44,10 @@ class Settings(BaseSettings):
 
     API_PREFIX: str = "/api"
 
+    LLM_API_KEY: str | None = None
+    LLM_BASE_URL: str | None = None
+    LLM_MODEL: str = "gpt-4o-mini"
+
     @model_validator(mode="after")
     def celery_defaults_from_redis(self):
         r = str(self.REDIS_URL)

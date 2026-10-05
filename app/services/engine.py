@@ -17,10 +17,12 @@ from app.models.workflow import ExecutionStatus, LogStatus, Workflow, WorkflowEx
 from app.services.nodes import (
     CodeNode,
     ConditionNode,
+    CrewNode,
     DatabaseNode,
     DelayNode,
     EmailNode,
     HTTPRequestNode,
+    LLMAgentNode,
     NodeResult,
     NodeStatus,
     TransformNode,
@@ -91,6 +93,8 @@ class WorkflowEngine:
             CodeNode.type_name: CodeNode(),
             DatabaseNode.type_name: DatabaseNode(),
             WebhookResponseNode.type_name: WebhookResponseNode(),
+            LLMAgentNode.type_name: LLMAgentNode(),
+            CrewNode.type_name: CrewNode(),
         }
 
     def resolve_node(self, node_type: str):
